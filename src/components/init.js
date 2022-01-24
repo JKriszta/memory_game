@@ -24,9 +24,44 @@ export default function init(nr) {
 
 }
 
-async function checkImage(url){
-	const response = await fetch(url)
-	const blob = await response.blob()
-	console.log(blob.type)
-	return blob.type.startsWith('image/')
-}
+// async function checkImage(url){
+// 	const response = await fetch(url)
+// 	const blob = await response.blob()
+// 	console.log(blob.type)
+// 	return blob.type.startsWith('image/')
+// }
+
+function checkImage(url) {
+
+	let flag=[]
+
+	let image = new Image();
+
+	image.onload = function() {
+
+			if (this.width > 0)
+
+					flag.push(1)
+
+			 
+
+	}
+
+	image.onerror = function() {
+
+			flag.push(0)
+
+		 
+
+	}
+
+	//image.src = url;
+
+	if(flag[0]==0)
+
+			return false
+
+	else
+
+			return true}
+			

@@ -29,7 +29,7 @@ function App() {
           setSolved([...solved, flipped[0], id])
           resetCards()
         } else {
-          setTimeout(resetCards, 1000)
+          setTimeout(resetCards, 500)
         }
     }
   }
