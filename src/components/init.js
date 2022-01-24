@@ -57,11 +57,10 @@ function checkImage(url) {
 
 	//image.src = url;
 
-	if(flag[0]==0)
+	if(flag[0]===0)
 
 			return false
 
 	else
 
 			return true}
-			
